@@ -1,0 +1,37 @@
+{
+  "tool": "Built-in imagegen (not CLI)",
+  "assets": [
+    {
+      "outputs": [
+        "characters/squirrel.webp",
+        "characters/tail.webp",
+        "characters/rabbit.webp",
+        "characters/rabbit-arm.webp"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: transparent 2 by 2 game sprite atlas, four separate objects in four equal quadrants with generous transparent gutters. Primary request: create a cohesive set of adorable premium animated-film 3D plush animal assets for NUTTY ADVENTURE. TOP LEFT quadrant: a small cheerful orange squirrel, entire body front facing, huge round chibi head, enormous glossy dark brown eyes with strong catchlights and lashes, cream belly and muzzle, little orange paws holding a large empty oval woven wicker catch basket at waist height; NO TAIL on this squirrel (tail is a separate sprite). Basket opening clearly horizontal and visible. Full feet visible. TOP RIGHT quadrant: just one enormous fluffy orange squirrel tail, a voluptuous sculpted S curve with cream highlights, vertically oriented, detached with no body. BOTTOM LEFT quadrant: a friendly slightly larger silver gray and white rabbit, front facing full body with long ears pink inside, huge glossy eyes, happy smile, natural plush fur, no arms visible (arms will be animated separately). BOTTOM RIGHT quadrant: one detached fluffy gray rabbit arm and little white paw, bent slightly, reaching outward horizontally. Each object isolated completely in its own equal quadrant, not touching edges or crossing central gutters. Style: non-photorealistic animated figurine, sculpted soft fur microtexture, warmly lit, rich volumetric shading, highly dimensional and very cute. Natural animal bodies without clothing or wearable accessories. Lighting from upper left, vibrant orange and cream, gray silver white and soft pink. No cast ground plane, no background, no words, no letters, no extra animals, no grid lines. Genuinely transparent alpha background.",
+      "transparent_background": true
+    },
+    {
+      "outputs": [
+        "backgrounds/enchanted-forest.webp"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: landscape background plate for a polished 2.5D arcade game. Primary request: an enchanted woodland clearing at golden hour, lush mossy forest, enormous old tree trunks framing both edges, huge curved roots, small glowing teal mushrooms and larger soft orange mushrooms on edges, clusters of ferns, rich soft grass, floating fireflies. Animated film 3D diorama quality, softly sculpted organic forms with tactile velvety texture, warm golden volumetric sunrays streaming diagonally from top center left against mysterious turquoise and deep cyan shadows. Composition: wide 16:10-ish landscape, open clean empty middle for gameplay and falling nuts, low flat grassy ground across bottom 12 percent, distant layered forest softly blurred with pronounced bokeh, dark leafy vignette at left and right edges, scenic mossy raised tree-root ledge at far upper portion but no dominant solid horizontal barrier. Upper center light opening. Cinematic depth, magical, happy, premium children's fantasy game. No animals, no characters, no vehicles, no text, no logos, no interface. Keep central play area uncluttered with readable warm pale haze.",
+      "transparent_background": false
+    },
+    {
+      "outputs": [
+        "characters/squirrel-victory.webp"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: transparent game character sprite. Reference image is the previously generated squirrel/rabbit atlas, use it only to keep character design exactly consistent. Primary request: generate ONLY the complete orange squirrel body from the upper left of the reference, now smiling joyfully with BOTH paws spread wide and up in celebration and WITHOUT a basket. Entire squirrel front facing, short feet visible. Do not include the tail, this will be composited separately. Same orange plush fur, cream belly and muzzle, gigantic glossy dark brown eyes with lashes, round chibi head, sculpted dimensional animated-film look and matching warm light. Transparent empty background, isolated full body with generous padding. No basket, no tail, no nuts, no other animal, no text, no clothes, no accessories. This is the final victory pose of the very same squirrel.",
+      "reference": "The original character atlas generated for this project",
+      "transparent_background": true
+    },
+    {
+      "outputs": [
+        "characters/truck.webp"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: transparent sprite for a 2.5D animated forest game. Primary request: a big chunky toy-like golden yellow loader cargo truck with four rubber wheels (visible two on near side and a hint of far ones), side view facing left, slightly elevated three-quarter view so the open cargo bed is visible. Cabin at left one third, big open low-sided cargo bed to the right two thirds, filled with mounds of almonds, acorns, chestnuts, hazelnuts and walnuts but keep the top center of the bed open enough for a rabbit character sprite to be placed behind it. No driver or animal in this image. Cheerful yellow and gold machine, rounded chunky shapes, subtle sculpted material textures, premium dimensional animated-film diorama shading matching plush furry squirrel and rabbit sprites, warm upper-left sunlight and a subtle cyan rim on the right. Entire vehicle isolated, fully visible with generous transparent padding, no ground plane, no forest, no words, no branding, no numbers, no humans, no accessories. Genuinely transparent alpha. Horizontal composition.",
+      "transparent_background": true
+    }
+  ]
+}
