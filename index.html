@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f5f2e8">
+  <meta name="description" content="A little forest adventure with five nut-catching challenges, five magical treasures, and one giant heart. Play free in your browser.">
+  <title>Nutty Adventure — The Squirrel & Rabbit Challenge</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/nuts/acorn.svg">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./engine.js"></script>
+  <script defer src="./art.js"></script>
+  <script defer src="./game.js"></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <button class="brand" id="homeButton" aria-label="Nutty Adventure home">
+        <span class="brand-mark"><img src="./assets/nuts/acorn.svg" alt=""></span>
+        <span>NUTTY <b>ADVENTURE</b><small>THE SQUIRREL & RABBIT CHALLENGE</small></span>
+      </button>
+      <div class="header-right"><span class="forest-note"><span class="tiny-star">✧</span> A LITTLE FOREST MAGIC</span>
+        <button class="icon-button" id="treasuresButton" title="My treasures" aria-label="My treasures"><svg viewBox="0 0 24 24"><path d="M3 9h18v12H3zM2 5h20v4H2zM12 5v16M12 5C7 6 5 3 7 2c2-1 4 2 5 3Zm0 0c5 1 7-2 5-3-2-1-4 2-5 3Z"/></svg><span id="treasureBadge" class="badge">0</span></button>
+        <button class="icon-button sound-button" id="soundButton" aria-label="Turn sound off" title="Sound on"><svg viewBox="0 0 24 24"><path d="m11 4-5 4H3v8h3l5 4V4Zm4 4c3 2 3 6 0 8m3-11c5 4 5 10 0 14"/></svg></button>
+      </div>
+    </header>
+    <main>
+      <div class="above-game"><span><i></i> A COZY LITTLE CHALLENGE</span><span id="saveStatus">Your adventure is saved as you go <svg viewBox="0 0 20 20"><path d="m4 10 4 4 8-9"/></svg></span></div>
+      <section class="game-stage is-menu" id="stage" aria-label="Nutty Adventure game">
+        <canvas id="gameCanvas" width="1200" height="660" tabindex="0" aria-label="Catch falling nuts with the squirrel’s basket. Use left and right arrows or A and D, or drag on the playfield.">Your browser needs HTML5 Canvas to play Nutty Adventure.</canvas>
+        <div class="scene-vignette"></div>
+        <div class="hud" id="hud" hidden>
+          <button class="hud-level" id="levelInfo" title="Level details"><img id="hudNut" src="./assets/nuts/almond.svg" alt=""><span><small id="levelNumber">LEVEL 01 / 05</small><strong id="levelName">Almond Meadow</strong></span></button>
+          <div class="score-block"><div><span id="scoreText">0 <em>/ 15 nuts</em></span><span id="remainingText">15 to your mystery box</span></div><div class="progress-track"><span id="progressFill"></span></div></div>
+          <div class="lives" id="lives" aria-label="5 lives remaining"></div>
+          <button class="icon-button pause-button" id="pauseButton" aria-label="Pause game"><svg viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></svg></button>
+        </div>
+        <div class="menu-overlay" id="menuScreen">
+          <div class="menu-copy"><div class="eyebrow"><span></span> SMALL PAWS. BIG ADVENTURE.</div>
+            <h1>NUTTY<br><span>ADVENTURE</span><svg viewBox="0 0 80 60" aria-hidden="true"><path d="m16 50 9-17M29 23 30 8M43 31l16-12M48 45l20 1"/></svg></h1>
+            <p class="menu-subtitle">The Squirrel & Rabbit Challenge</p>
+            <p class="menu-description">Catch the nuts. Unlock the magic.<br>Win the heart!</p>
+            <button class="primary-button play-button" id="playButton"><svg viewBox="0 0 20 20"><path d="m6 3 11 7-11 7Z"/></svg><span>PLAY GAME</span><span class="button-arrow">→</span></button>
+            <div class="menu-links"><button id="howButton">HOW TO PLAY</button><span>·</span><button id="levelsButton">EXPLORE LEVELS</button></div>
+            <div class="adventure-caption"><span class="mini-stars">✦ ✧</span> Five levels. Five surprises. One big friendship.</div>
+          </div>
+          <div class="friend-label"><span>Meet your new<br><b>forest friends.</b></span><svg viewBox="0 0 100 70"><path d="M5 10q50-10 66 37m-19-5 21 10 4-23"/></svg></div>
+          <div class="menu-scene-label"><span class="glow-dot"></span> THE ENCHANTED FOREST <small>Where a little kindness goes a long way.</small></div>
+        </div>
+        <div class="game-toast" id="gameToast" role="status"></div>
+        <div class="level-intro" id="levelIntro" hidden><small id="introNumber">LEVEL ONE</small><strong id="introName">Almond Meadow</strong><span id="introSubtitle"></span></div>
+        <div class="touch-controls" id="touchControls" hidden><button id="leftTouch" aria-label="Move left">←</button><span>DRAG TO MOVE</span><button id="rightTouch" aria-label="Move right">→</button></div>
+        <div class="stage-bottom" id="stageBottom"><span>✧ A FRIENDSHIP WORTH CATCHING</span><span>MADE OF LITTLE MOMENTS & BIG HEARTS</span></div>
+        <div class="overlay" id="modalOverlay" hidden>
+          <section class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1"></section>
+        </div>
+      </section>
+      <section class="journey" aria-label="Your five forest levels"><div class="journey-heading"><span>YOUR FOREST JOURNEY</span><small>Every stop holds a little surprise.</small></div><div class="level-trail" id="levelTrail"></div></section>
+      <div class="below-game"><span><span class="keycap">←</span><span class="keycap">→</span> or <span class="keycap">A</span><span class="keycap">D</span> to move <span class="control-dot">·</span> Drag on touchscreens</span><span>15 nuts to catch. A little magic to keep. <b>♡</b></span></div>
+    </main>
+    <footer><span>A tiny adventure for a happy heart.</span><button id="accessibilityButton">Motion & settings</button></footer>
+  </div>
+  <div class="sr-only" id="liveStatus" role="status" aria-live="polite" aria-atomic="true"></div>
+  <noscript><p class="noscript">Please enable JavaScript to play Nutty Adventure.</p></noscript>
+</body>
+</html>
